@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (message) {
             // Make elements for message
-            const messageElement = document.createElement('div');
-            
+            const messageValue = document.createElement('div');
+            messageValue.classList.add('message');
+            messageValue.textContent = message;
         }
     }
 });
