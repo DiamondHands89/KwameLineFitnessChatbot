@@ -6,7 +6,11 @@ document.addEventListener("DOMContentLoaded", function() {
     function sendMessage() {
         const message = userInput.ariaValueMax.trim();
 
-        if (message) {}
+        if (message) {
+            // Make elements for message
+            const messageElement = document.createElement('div');
+            
+        }
     }
 });
 
