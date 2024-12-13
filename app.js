@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const chatbotContainer = document.querySelector('.chatbotContainer');
 
     function sendMessage() {
+        const message = userInput.ariaValueMax.trim();
 
+        if (message) {}
     }
 });
 
