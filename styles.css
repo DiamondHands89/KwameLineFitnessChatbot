@@ -17,6 +17,7 @@
 }
 
 .userThings {
+    border: 1px solid;
     align-self: flex-end;
 }
 

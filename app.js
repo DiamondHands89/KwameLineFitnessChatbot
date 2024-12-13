@@ -1,4 +1,12 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const userInput = document.getElementById('userInput');
+    const sendBtn = document.querySelector('#sendBtn');
+    const chatbotContainer = document.querySelector('.chatbotContainer');
 
+    function sendMessage() {
+
+    }
+});
 
 
 
