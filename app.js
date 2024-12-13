@@ -7,10 +7,15 @@ document.addEventListener("DOMContentLoaded", function() {
         const message = userInput.ariaValueMax.trim();
 
         if (message) {
-            // Make elements for message
+            // Make element for message
             const messageValue = document.createElement('div');
             messageValue.classList.add('message');
             messageValue.textContent = message;
+
+            // Append message to Chatbot Container
+            chatbotContainer.appendChild(messageValue);
+            
+            
         }
     }
 });
