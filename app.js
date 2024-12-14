@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+sendBtn.addEventListener('click', sendMessage);
+
+
 
 
 
