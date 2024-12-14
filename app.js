@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Append message to Chatbot Container
             chatbotContainer.appendChild(messageValue);
             
-            
+            userInput.value = '';
         }
     }
 });
