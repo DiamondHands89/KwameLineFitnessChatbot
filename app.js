@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const chatbotContainer = document.querySelector('.chatbotContainer');
 
     function sendMessage() {
-        const message = userInput.ariaValueMax.trim();
+        const message = userInput.value.trim();
 
         if (message) {
             // Make element for message
@@ -16,6 +16,11 @@ document.addEventListener("DOMContentLoaded", function() {
             chatbotContainer.appendChild(messageValue);
             
             userInput.value = '';
+
+            messageValue.style.backgroundColor = 'lightblue';
+            messageValue.style.margin = '10px';
+            messageValue.style.padding = '10px';
+            messageValue.style.borderRadius = '10px'
         }
     }
 });
