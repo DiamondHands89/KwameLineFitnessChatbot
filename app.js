@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 sendBtn.addEventListener('click', sendMessage);
 
+console.log('Current URL:', window.location.href);
+alert('Welcome to Kwame's Health-Hot Line!');
 
 
 
