@@ -1,6 +1,7 @@
 console.log("loaded")
 
 document.addEventListener("DOMContentLoaded", function() {
+    console.log("Ready to go");
     const userInput = document.getElementById('userInput');
     const sendBtn = document.querySelector('#sendBtn');
     const chatbotContainer = document.querySelector('.chatbotContainer');
