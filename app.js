@@ -23,12 +23,21 @@ document.addEventListener("DOMContentLoaded", function() {
             messageValue.style.borderRadius = '10px'
         }
     }
+
+
+    sendBtn.addEventListener('click', sendMessage);
+
+    console.log('Current URL:', window.location.href);
+    alert('Welcome to Kwame's Health-Hot Line!');
+
+    userInput.addEventListener('input', function() {
+        if (userInput.validity.valueMissing) {
+            userInput.setCustomValidity('Please enter a message');
+        } else {
+            userInput.setCustomValidity('');
+        }
+    });
 });
-
-sendBtn.addEventListener('click', sendMessage);
-
-console.log('Current URL:', window.location.href);
-alert('Welcome to Kwame's Health-Hot Line!');
 
 
 
