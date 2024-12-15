@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     sendBtn.addEventListener('click', sendMessage);
 
     console.log('Current URL:', window.location.href);
-    alert('Welcome to Kwame's Health-Hot Line!');
+    alert('Welcome to The Kwame Health-Hot Line!');
 
     userInput.addEventListener('input', function() {
         if (userInput.validity.valueMissing) {
