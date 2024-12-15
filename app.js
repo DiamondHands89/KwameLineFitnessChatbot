@@ -1,10 +1,15 @@
+console.log("loaded")
+
 document.addEventListener("DOMContentLoaded", function() {
     const userInput = document.getElementById('userInput');
     const sendBtn = document.querySelector('#sendBtn');
     const chatbotContainer = document.querySelector('.chatbotContainer');
 
+
     function sendMessage() {
         const message = userInput.value.trim();
+
+        console.log("Send button clicked or Enter key pressed");
 
         if (message) {
             // Make element for message
@@ -13,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
             messageValue.textContent = message;
 
             // Append message to Chatbot Container
-            chatbotContainer.appendChild(messageValue);
+            // chatbotContainer.appendChild(messageValue);
+
+            chatbotContainer.insertBefore(messageValue, userThings);
             
             userInput.value = '';
 
@@ -21,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
             messageValue.style.margin = '10px';
             messageValue.style.padding = '10px';
             messageValue.style.borderRadius = '10px'
+            console.log("Message added to convo");
         }
     }
 
