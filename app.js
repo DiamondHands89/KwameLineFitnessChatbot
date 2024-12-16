@@ -15,26 +15,15 @@ document.addEventListener("DOMContentLoaded", function() {
         greetingValue.textContent = 'Hi! How can I help you with your physical needs?';
         messageBox.appendChild(greetingValue);
 
-        responseValue.style.backgroundColor = 'salmon';
-        responseValue.style.margin = '10px';
-        responseValue.style.padding = '10px';
-        responseValue.style.borderRadius = '10px'
-        responseValue.style.alignSelf = 'flex-start';
+        greetingValue.style.backgroundColor = 'salmon';
+        greetingValue.style.margin = '10px';
+        greetingValue.style.padding = '10px';
+        greetingValue.style.borderRadius = '10px'
+        greetingValue.style.alignSelf = 'flex-start';
         console.log("Greeting added to convo");
     }
-
-    function botResponse1() {
-        const responseValue = document.createElement('div');
-        responseValue.classList.add('response');
-
-    //     responseValue.style.backgroundColor = 'salmon';
-    //     responseValue.style.margin = '10px';
-    //     responseValue.style.padding = '10px';
-    //     responseValue.style.borderRadius = '10px'
-    //     responseValue.style.alignSelf = 'flex-start';
-    //     console.log("Response added to convo");
-    }
-    console.log(botResponse());
+    // Bot initial greeting
+    botGreeting();
 
     function sendMessage() {
         const message = userInput.value.trim();
@@ -70,6 +59,35 @@ document.addEventListener("DOMContentLoaded", function() {
             sendMessage();
         }
     })
+
+    function botResponse1(userMessage) {
+        if (!userMessage) return;
+
+        const responseValue = document.createElement('div');
+        responseValue.classList.add('response');
+
+        // Analyze user message
+        const lowerCaseMessage = userMessage.toLowerCase();
+        if (lowerCaseMessage.includes('gain') || lowerCaseMessage.includes('bulk') || lowerCaseMessage.includes('increase') || lowerCaseMessage.includes('muscle')) {
+            responseValue.innerHTML = "The healthiest way to gain weight is through building lean muscle mass. I have a few questions that will help us find a good starting base for the amount of macronutrients required to reach your goals.<br>What is your current height and weight? <br>And what is your desired weight?"
+        } else if (lowerCaseMessage.includes('lose') || lowerCaseMessage.includes('cut') || lowerCaseMessage.includes('reduce') || lowerCaseMessage.includes('decrease') || lowerCaseMessage.includes('loss') || lowerCaseMessage.includes('fat')) {
+            responseValue.innerHTML = "It's great that you want to lose weight and improve your heath. <br>What's your current height and weight, and what do you want to get to?"
+        } else {
+            responseValue.innerHTML = "Can you please provide more details about your goals?"
+        }
+
+        responseValue.style.backgroundColor = 'salmon';
+        responseValue.style.margin = '10px';
+        responseValue.style.padding = '10px';
+        responseValue.style.borderRadius = '10px'
+        responseValue.style.alignSelf = 'flex-start';
+        console.log("Response added to convo");
+    }
+    // Bot analyzed response 1 (Choosing Path)
+    
+
+
+    
 
     console.log('Current URL:', window.location.href);
     alert('Welcome to The Kwame Health-Hot Line!');
