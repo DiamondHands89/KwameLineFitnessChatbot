@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
             messageValue.style.borderRadius = '10px'
             messageValue.style.alignSelf = 'flex-end';
             console.log("Message added to convo");
+            botResponse1(message);
         }
     }
 
