@@ -9,18 +9,30 @@ document.addEventListener("DOMContentLoaded", function() {
     const userThings = document.querySelector('.userThings');
     const messageBox = document.querySelector('.messageBox');
 
-    function botResponse() {
-        const responseValue = document.createElement('div');
-        responseValue.classList.add('response');
-        responseValue.textContent = 'Hi! How can I help you with your physical needs?';
-        messageBox.appendChild(responseValue);
+    function botGreeting() {
+        const greetingValue = document.createElement('div');
+        greetingValue.classList.add('greeting');
+        greetingValue.textContent = 'Hi! How can I help you with your physical needs?';
+        messageBox.appendChild(greetingValue);
 
         responseValue.style.backgroundColor = 'salmon';
         responseValue.style.margin = '10px';
         responseValue.style.padding = '10px';
         responseValue.style.borderRadius = '10px'
         responseValue.style.alignSelf = 'flex-start';
-        console.log("Response added to convo");
+        console.log("Greeting added to convo");
+    }
+
+    function botResponse1() {
+        const responseValue = document.createElement('div');
+        responseValue.classList.add('response');
+
+    //     responseValue.style.backgroundColor = 'salmon';
+    //     responseValue.style.margin = '10px';
+    //     responseValue.style.padding = '10px';
+    //     responseValue.style.borderRadius = '10px'
+    //     responseValue.style.alignSelf = 'flex-start';
+    //     console.log("Response added to convo");
     }
     console.log(botResponse());
 
