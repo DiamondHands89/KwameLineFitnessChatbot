@@ -26,6 +26,11 @@ document.addEventListener("DOMContentLoaded", function() {
     botGreeting();
 
     function sendMessage() {
+        if (userInput.value.trim() === "") {
+            alert("Please enter a message");
+            console.log("Nothing submitted");
+            return;
+        }
         const message = userInput.value.trim();
 
         console.log("Send button clicked or Enter key pressed");
