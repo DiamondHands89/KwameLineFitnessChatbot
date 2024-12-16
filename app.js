@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const sendBtn = document.querySelector('#sendBtn');
     const chatbotContainer = document.querySelector('.chatbotContainer');
     const userThings = document.querySelector('.userThings');
+    const messageBox = document.querySelector('messageBox');
 
 
     function sendMessage() {
@@ -20,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function() {
             messageValue.textContent = message;
 
             // Append message to Chatbot Container
-            // chatbotContainer.appendChild(messageValue);
+            messageBox.appendChild(messageValue);
 
-            chatbotContainer.insertBefore(messageValue, userThings);
+            // chatbotContainer.insertBefore(messageValue, userThings);
             
             userInput.value = '';
 
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
             messageValue.style.margin = '10px';
             messageValue.style.padding = '10px';
             messageValue.style.borderRadius = '10px'
+            messageValue.style.alignSelf = 'flex-end';
             console.log("Message added to convo");
         }
     }
