@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const sendBtn = document.querySelector('#sendBtn');
     const chatbotContainer = document.querySelector('.chatbotContainer');
     const userThings = document.querySelector('.userThings');
-    const messageBox = document.querySelector('messageBox');
+    const messageBox = document.querySelector('.messageBox');
 
 
     function sendMessage() {
